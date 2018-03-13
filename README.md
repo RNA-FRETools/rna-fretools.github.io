@@ -1,3 +1,3 @@
-# RNA-FRETools.github.io
+# RNA-FRETools
 
 ## MASH-FRET
