@@ -1,6 +1,4 @@
-# ![alt text](https://github.com/fdsteffen/mash-fret/blob/master/doc/images/mash-fret_logo.png) MASH-FRET 
-
-## About MASH-FRET
+# About MASH-FRET
 
 This is MASHsmFRET MATLAB Package - A modular toolkit to process surface-immobilized single molecule data.
 
