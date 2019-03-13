@@ -42,7 +42,7 @@ MASH was developed with MATLAB 7.12 (R2011a) and operating system Windows 7. The
 
 ## Usage
 
-For information about the different modules in MASH-FRET please visit our [Wiki page](https://github.com/fdsteffen/mash-fret/wiki).
+For information about the different modules in MASH-FRET please visit our documentation: https://rna-fretools.github.io/MASH-FRET/.
 
 ## External links
 
