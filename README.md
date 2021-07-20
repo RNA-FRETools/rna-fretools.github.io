@@ -19,20 +19,20 @@ We have developed open-source software packages for analysis and prediction of s
 
 ---
 
-### <a href="https://github.com/fdsteffen/lifefit"> <img src=https://raw.githubusercontent.com/fdsteffen/lifefit/master/docs/source/_static/lifefit_logo.png width=50px/></a> Lifefit 
+### <a href="https://github.com/fdsteffen/lifefit"> <img src="https://raw.githubusercontent.com/fdsteffen/lifefit/master/docs/source/_static/lifefit_logo.png" width=50px/></a> Lifefit 
 *Lifefit* uses iterative reconvolution fitting to analyze fluorescent lifetime and dynamic anisotropy decays.
 
 - F. D. Steffen, R. K. O. Sigel, R. Börner, *Phys. Chem Chem. Phys* (2016) [![](https://img.shields.io/badge/DOI-10.1039/c6cp04277e-blue.svg?&style=flat-square)](https://doi.org/10.1039/c6cp04277e)
 
 ---
 
-### <a href="https://github.com/RNA-FRETools/fretraj"> <img src=https://raw.githubusercontent.com/RNA-FRETools/fretraj/master/docs/images/fretraj_logo.png width=50px/></a> FRETraj
+### <a href="https://github.com/RNA-FRETools/fretraj"> <img src="https://raw.githubusercontent.com/RNA-FRETools/fretraj/master/docs/images/fretraj_logo.png" width=50px/></a> FRETraj
 By calculating multiple fluorophore accessible-contact volumes (ACV) along a molecular dynamics trajectory, *FRETraj* predicts transfer efficiency distributions that help to interpret single-molecule experiments.
 
 - F. D. Steffen, R. K. O. Sigel, R. Börner, *Phys. Chem Chem. Phys* (2016) [![](https://img.shields.io/badge/DOI-10.1039/c6cp04277e-blue.svg?&style=flat-square)](https://doi.org/10.1039/c6cp04277e)
 ---
 
-### <a href="https://github.com/RNA-FRETools/fluordynamics"> <img src=https://raw.githubusercontent.com/RNA-FRETools/fluordynamics/master/docs/source/_static/fluordynamics_logo.png width=50px/></a> FRETlabel
+### <a href="https://github.com/RNA-FRETools/fluordynamics"> <img src="https://raw.githubusercontent.com/RNA-FRETools/fluordynamics/master/docs/source/_static/fluordynamics_logo.png" width=50px/></a> FRETlabel
 *FRETlabel* couples fluorescent dyes to your nucleic acid of interest using common chemical conjugation chemistries. 
 
 - F. D. Steffen, R. Börner, E. Freisinger, R. K. O. Sigel, *Chimia* (2019) [![](https://img.shields.io/badge/DOI-10.2533/chimia.2019.257-blue.svg?&style=flat-square)](https://doi.org/10.2533/chimia.2019.257)
