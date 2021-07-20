@@ -1,52 +1,57 @@
-# About MASH-FRET
+# RNA-FRETools
 
-This is MASHsmFRET MATLAB Package - A modular toolkit to process surface-immobilized single molecule data.
+We are combining single-molecule FRET spectroscopy with computational modeling to elucidate how RNA structure and dynamics conveys function.
 
-License: MIT
+## Software packages
 
-MASH-FRET was developed by **Mélodie C.A.-S. Hadzic** (University of Zürich, melodie.hadzic@chem.uzh.ch) and Danny Kowerko (Technical University of Chemnitz, danny.kowerko@informatik.tu-chemnitz.de) in the group of Roland K.O. Sigel. MASH-FRET was further developed and is currently taken care of by by Fabio D. Steffen (University of Zürich, fabio.steffen@uzh.ch) and Richard Börner (University of Zürich, richard.boerner@chem.uzh.ch). 
+We have developed open-source software packages for analysis and prediction of single-molecule experiments aiming to integrate FRET with molecular simulations.
 
-For more information please contact rnafretools@uzh.ch
 
-If you use MASH-FRET in your work please cite ...
+<a href="https://github.com/RNA-FRETools/MASH-FRET"><img src="https://github.com/RNA-FRETools/MASH-FRET/blob/master/docs/assets/images/logos/logo-MASH_400px.png" width=50px/></a>>
+*MASH-FRET* analyzes your experimental and synthetic single-molecule microscopy videos with automated molecule sorting, trace processing as well as histogram building with integrated bootstrapping.
 
-... for the simulation tool:
+- R. Börner, D. Kowerko, M.C.A.S. Hadzic, S.L.B. König, M. Ritter, R.K.O. Sigel, *PLoS One* (2018), *13*, e0195277. [![](https://img.shields.io/badge/DOI-10.1371/journal.pone.0195277-blue.svg?&style=flat-square)](https://doi.org/10.1371/journal.pone.0195277)
 
-R. Börner*, D. Kowerko*, M. C.A.S. Hadzic*, S.L.B.König, M.Ritter, R.K.O.Sigel, "Simulations of Camera-Based Single-Molecule Fluorescence Experiments" *PLoS One* **2017**, accepted. (DOI:) 
+M.C.A.S. Hadzic, R. Börner, D. Kowerko, S.L.B. König, R.K.O. Sigel, *J. Phys. Chem. B* (2018) [![](https://img.shields.io/badge/DOI-10.1021/acs.jpcb.7b12483-blue.svg)](https://doi.org/10.1021/acs.jpcb.7b12483)
 
-Supporting Information for parameter optimization and SM localization method comparison (http://skinner.informatik.tu-chemnitz.de:9081/#/)
+- F. D. Steffen, M. Khier, D. Kowerko, R. A. Cunha, R. Börner, R. K. O. Sigel, *Nat. Commun.* (2020) [![](https://img.shields.io/badge/DOI-10.1038/s41467--019--13683--4-blue.svg?&style=flat-square)](https://doi.org/10.1038/s41467-019-13683-4)
 
-... for the state transition analyzing tool:
+- M.C.A.S. Hadzic, D. Kowerko, R. Börner, S. Zelger-Paulus, R.K.O. Sigel, *Proc. SPIE* (2016) [![](https://img.shields.io/badge/DOI-10.1117/12.2211191-blue.svg)](https://doi.org/10.1117/12.2211191)
 
-Mélodie C. A. S. Hadzic*, D. Kowerko, R. Börner, S. Zelger-Paulus, R.K.O. Sigel, "Detailed analysis of complex single molecule FRET data with the software MASH" *Proc. SPIE* **2016**, 9711:971119. (DOI:10.1117/12.2211191)
+- S.L.B König, M.C.A.S. Hadzic, E. Fiorini, R. Börner, D. Kowerko, W. Blanckenhorn, R.K.O. Sigel, *Plos One* (2013) [![](https://img.shields.io/badge/DOI-10.1371/journal.pone.0084157-blue.svg)](https://doi.org/10.1371/journal.pone.0084157)
 
-and 
+---
 
-Mélodie C. A. S. Hadzic*, R. Börner*, D. Kowerko, S.L.B.König, R.K.O. Sigel, "Assessment of State Identification and State Transition Detection Exemplified on Fluorescence Intensity-Based sm-FRET Data." **2017**, under review. (DOI:10.1371/journal.pone.0084157)
+<a href="https://github.com/fdsteffen/lifefit"> <img src=https://github.com/fdsteffen/lifefit/blob/master/docs/source/_static/lifefit_logo.png width=50px/></a> 
+*Lifefit* uses iterative reconvolution fitting to analyze fluorescent lifetime and dynamic anisotropy decays.
 
-... for the bootstraping algorythm BOBA FRET:
+- F. D. Steffen, R. K. O. Sigel, R. Börner, *Phys. Chem Chem. Phys* (2016) [![](https://img.shields.io/badge/DOI-10.1039/c6cp04277e-blue.svg?&style=flat-square)](https://doi.org/10.1039/c6cp04277e)
 
-S.L.B.König, Mélodie C. A. S. Hadzic*, Erica Fiorini, R. Börner*, D. Kowerko*, Wolf U. Blanckenhorn, R.K.O. Sigel, Börner, Richard; Kowerko, Danny; ; Sigel, Roland Karl Oliver "BOBA FRET: bootstrap-based analysis of single-molecule FRET data" *PLoS One* **2013**, 8(12):e84157. (DOI: )
+---
 
-Happy MASHing!
+<a href="https://github.com/RNA-FRETools/fretraj"> <img src=https://github.com/RNA-FRETools/fretraj/blob/master/docs/images/fretraj_logo.png width=50px/></a>
+By calculating multiple fluorophore accessible-contact volumes (ACV) along a molecular dynamics trajectory, *FRETraj* predicts transfer efficiency distributions that help to interpret single-molecule experiments.
 
-Your developers (Mélodie, Danny, Richard and Fabio)
+---
 
-## Installation
+<a href="https://github.com/RNA-FRETools/fluordynamics"> <img src=https://github.com/RNA-FRETools/fluordynamics/blob/master/docs/source/_static/fluordynamics_logo.png width=50px/></a>
+*FRETlabel* couples fluorescent dyes to your nucleic acid of interest using common chemical conjugation chemistries. 
 
-Download the folder "MASH-FRET" into the directory of your choice. Then within MATLAB go to file >> Set path... and add the directory containing "MASH-FRET" to the list (if it isn't already). That's it.
+- F. D. Steffen, R. Börner, E. Freisinger, R. K. O. Sigel, *Chimia* (2019) [![](https://img.shields.io/badge/DOI-10.2533/chimia.2019.257-blue.svg?&style=flat-square)](https://doi.org/10.2533/chimia.2019.257)
 
-## Dependencies
+- M. Zhao, F. D. Steffen, R. Börner, M. F. Schaffer, R. K. O. Sigel, *Nucleic Acids Res.* (2018) [![](https://img.shields.io/badge/DOI-10.1093/nar/gkx1100-blue.svg?&style=flat-square)](https://doi.org/10.1093/nar/gkx1100)
 
-MASH was developed with MATLAB 7.12 (R2011a) and operating system Windows 7. The compatibility was further tested on Windows 8, 8.1 and 10 with MATLAB 7.12 (R2011a) to 9.2 (R2017a).
 
-## Usage
+## About us
 
-For information about the different modules in MASH-FRET please visit our documentation: https://rna-fretools.github.io/MASH-FRET/.
+- [Sigel lab](https://www.chem.uzh.ch/en/sigel.html) - University of Zurich
+- [Börner lab](https://www.inw.hs-mittweida.de/webs/boerner/) - University of Applied Sciences Mittweida
 
-## External links
+### Maintainers
+- Mélodie Hadzic @mca-sh 
+- Fabio Steffen @fdsteffen
+- Richard Börner @pflanzenhueter
 
-http://skinner.informatik.tu-chemnitz.de:9081/#/
+### Selected references
 
-http://www.chem.uzh.ch/en/sigel/research/software.html
 
