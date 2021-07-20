@@ -1,3 +1,3 @@
-theme: jekyll-theme-minima
+theme: minima
 title: RNA-FRETools
-description: A toolbox for single-molecule FRET and RNA
+description: Integrating single-molecule dynamics of RNA with molecular simulations
