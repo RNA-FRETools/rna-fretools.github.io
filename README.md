@@ -1,5 +1,3 @@
-# RNA-FRETools
-
 We are combining single-molecule FRET spectroscopy with computational modeling to elucidate how RNA structure and dynamics conveys function.
 
 ## Software packages
@@ -26,10 +24,11 @@ We have developed open-source software packages for analysis and prediction of s
 
 ---
 
-### <a href="https://github.com/RNA-FRETools/fretraj"> <img src="https://raw.githubusercontent.com/RNA-FRETools/fretraj/master/docs/images/fretraj_logo.png" width=50px/></a> FRETraj
+### <a href="https://github.com/RNA-FRETools/fretraj"> <img src="https://raw.githubusercontent.com/RNA-FRETools/fretraj/master/docs/images/fretraj_logo.png" width=43px/></a> FRETraj
 By calculating multiple fluorophore accessible-contact volumes (ACV) along a molecular dynamics trajectory, *FRETraj* predicts transfer efficiency distributions that help to interpret single-molecule experiments.
 
 - F. D. Steffen, R. K. O. Sigel, R. Börner, *Phys. Chem Chem. Phys* (2016) [![](https://img.shields.io/badge/DOI-10.1039/c6cp04277e-blue.svg?&style=flat-square)](https://doi.org/10.1039/c6cp04277e)
+
 ---
 
 ### <a href="https://github.com/RNA-FRETools/fluordynamics"> <img src="https://raw.githubusercontent.com/RNA-FRETools/fluordynamics/master/docs/source/_static/fluordynamics_logo.png" width=50px/></a> FRETlabel
