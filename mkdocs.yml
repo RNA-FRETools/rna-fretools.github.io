@@ -1,0 +1,31 @@
+site_name: RNA-FRETools
+site_url: https://rna-fretools.github.io/
+theme:
+  name: material
+  custom_dir: docs/overrides
+  features:
+    - navigation.tabs
+  icon:
+    logo: material/dna
+  favicon: images/FRETools_logo.png
+nav:
+    - Home: index.md
+    - Software: software.md
+    - Publications: 
+        - MASH-FRET: publications/mash-fret.md
+        - FRETraj: publications/fretraj.md
+        - FRETlabel: publications/fretlabel.md
+        - Lifefit: publications/lifefit.md
+    - About Us: about.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+plugins:
+  - search
+repo_url: https://github.com/RNA-FRETools/
