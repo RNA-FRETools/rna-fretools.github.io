@@ -5,6 +5,8 @@ theme:
   custom_dir: docs/overrides
   features:
     - navigation.tabs
+    - navigation.instant
+    - navigation.indexes
   icon:
     logo: material/dna
   favicon: images/rna-fretools_logo.png
