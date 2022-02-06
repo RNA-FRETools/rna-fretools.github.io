@@ -7,7 +7,7 @@ theme:
     - navigation.tabs
   icon:
     logo: material/dna
-  favicon: images/FRETools_logo.png
+  favicon: images/rna-fretools_logo.png
 nav:
     - Home: index.md
     - Software: software.md
