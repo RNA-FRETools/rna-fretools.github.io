@@ -1,0 +1,785 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://rna-fretools.github.io/publications/mash-fret/">
+      
+      
+        <link rel="prev" href="../../software/">
+      
+      
+        <link rel="next" href="../fretraj/">
+      
+      
+      <link rel="icon" href="../../images/rna-fretools_logo.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>MASH-FRET - RNA-FRETools</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#publications" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="RNA-FRETools" class="md-header__button md-logo" aria-label="RNA-FRETools" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4V2m14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4V2m-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42l1.83-1.19M7 3h10v1l-.06.5H7.06L7 4V3m.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06l.51-.44m-2.03 3h9.88l.06.5v1H7v-1l.06-.5Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RNA-FRETools
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MASH-FRET
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RNA-FRETools/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../software/" class="md-tabs__link">
+        
+  
+    
+  
+  Software
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  Publications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  About Us
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="RNA-FRETools" class="md-nav__button md-logo" aria-label="RNA-FRETools" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4V2m14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4V2m-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42l1.83-1.19M7 3h10v1l-.06.5H7.06L7 4V3m.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06l.51-.44m-2.03 3h9.88l.06.5v1H7v-1l.06-.5Z"/></svg>
+
+    </a>
+    RNA-FRETools
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RNA-FRETools/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Publications
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Publications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MASH-FRET
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    MASH-FRET
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mash-fret" class="md-nav__link">
+    <span class="md-ellipsis">
+      MASH-FRET
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MASH-FRET">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simulations-and-video-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulations and video processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transition analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogram-analysis-and-bootstrapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histogram analysis and bootstrapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fretraj/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FRETraj
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fretlabel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FRETlabel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lifefit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lifefit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mash-fret" class="md-nav__link">
+    <span class="md-ellipsis">
+      MASH-FRET
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MASH-FRET">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simulations-and-video-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulations and video processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transition analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogram-analysis-and-bootstrapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histogram analysis and bootstrapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="publications">Publications</h1>
+<h2 id="mash-fret">MASH-FRET</h2>
+<h3 id="simulations-and-video-processing">Simulations and video processing</h3>
+<p>R. Börner, D. Kowerko, M.C.A.S. Hadzic, S.L.B. König, M. Ritter, R.K.O. Sigel, <em>PLoS One</em> (2018), <em>13</em>, e0195277. <a href="https://doi.org/10.1371/journal.pone.0195277"><img alt="" src="https://img.shields.io/badge/DOI-10.1371/journal.pone.0195277-blue.svg?&amp;style=flat-square" /></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Simulations of camera-based single-molecule fluorescence experiments</p>
+<p>Single-molecule microscopy has become a widely used technique in (bio)physics and (bio)chemistry. A popular implementation is single-molecule Förster Resonance Energy Transfer (smFRET), for which total internal reflection fluorescence microscopy is frequently combined with camera-based detection of surface-immobilized molecules. Camera-based smFRET experiments generate large and complex datasets and several methods for video processing and analysis have been reported. As these algorithms often address similar aspects in video analysis, there is a growing need for standardized comparison. Here, we present a Matlab-based software (MASH-FRET) that allows for the simulation of camera-based smFRET videos, yielding standardized data sets suitable for benchmarking video processing algorithms. The software permits to vary parameters that are relevant in cameras-based smFRET, such as video quality, and the properties of the system under study. Experimental noise is modeled taking into account photon statistics and camera noise. Finally, we survey how video test sets should be designed to evaluate currently available data analysis strategies in camera-based sm fluorescence experiments. We complement our study by pre-optimizing and evaluating spot detection algorithms using our simulated video test sets. </p>
+</div>
+<h3 id="transition-analysis">Transition analysis</h3>
+<p>M.C.A.S. Hadzic, R. Börner, D. Kowerko, S.L.B. König, R.K.O. Sigel, <em>J. Phys. Chem. B</em> (2018) <a href="https://doi.org/10.1021/acs.jpcb.7b12483"><img alt="" src="https://img.shields.io/badge/DOI-10.1021/acs.jpcb.7b12483-blue.svg" /></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Reliable State Identification and State Transition Detection in Fluorescence Intensity-Based Single-Molecule Förster Resonance Energy-Transfer Data</p>
+<p><figure markdown>
+    <img alt="" src="../../images/graphical_abstracts/Hadzic_JPCB_2018.png" width="450" />
+</figure>
+Single-molecule Förster resonance energy transfer (smFRET) is a powerful technique to probe biomolecular structure and dynamics. A popular implementation of smFRET consists of recording fluorescence intensity time traces of surface-immobilized, chromophore-tagged molecules. This approach generates large and complex data sets, the analysis of which is to date not standardized. Here, we address a key challenge in smFRET data analysis: the generation of thermodynamic and kinetic models that describe with statistical rigor the behavior of FRET trajectories recorded from surface-tethered biomolecules in terms of the number of FRET states, the corresponding mean FRET values, and the kinetic rates at which they interconvert. For this purpose, we first perform Monte Carlo simulations to generate smFRET trajectories, in which a relevant space of experimental parameters is explored. Then, we provide an account on current strategies to achieve such model selection, as well as a quantitative assessment of their performances. Specifically, we evaluate the performance of each algorithm (change-point analysis, STaSI, HaMMy, vbFRET, and ebFRET) with respect to accuracy, reproducibility, and computing time, which yields a range of algorithm-specific referential benchmarks for various data qualities. Data simulation and analysis were performed with our MATLAB-based multifunctional analysis software for handling smFRET data (MASH-FRET). </p>
+</div>
+<h3 id="histogram-analysis-and-bootstrapping">Histogram analysis and bootstrapping</h3>
+<p>S.L.B König, M.C.A.S. Hadzic, E. Fiorini, R. Börner, D. Kowerko, W. Blanckenhorn, R.K.O. Sigel, <em>Plos One</em> (2013) <a href="https://doi.org/10.1371/journal.pone.0084157"><img alt="" src="https://img.shields.io/badge/DOI-10.1371/journal.pone.0084157-blue.svg" /></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">BOBA FRET: Bootstrap-Based Analysis of Single-Molecule FRET Data</p>
+<p>Time-binned single-molecule Förster resonance energy transfer (smFRET) experiments with surface-tethered nucleic acids or proteins permit to follow folding and catalysis of single molecules in real-time. Due to the intrinsically low signal-to-noise ratio (SNR) in smFRET time traces, research over the past years has focused on the development of new methods to extract discrete states (conformations) from noisy data. However, limited observation time typically leads to pronounced cross-sample variability, i.e., single molecules display differences in the relative population of states and the corresponding conversion rates. Quantification of cross-sample variability is necessary to perform statistical testing in order to assess whether changes observed in response to an experimental parameter (metal ion concentration, the presence of a ligand, etc.) are significant. However, such hypothesis testing has been disregarded to date, precluding robust biological interpretation. Here, we address this problem by a bootstrap-based approach to estimate the experimental variability. Simulated time traces are presented to assess the robustness of the algorithm in conjunction with approaches commonly used in thermodynamic and kinetic analysis of time-binned smFRET data. Furthermore, a pair of functionally important sequences derived from the self-cleaving group II intron Sc.ai5γ (d3’EBS1/IBS1) is used as a model system. Through statistical hypothesis testing, divalent metal ions are shown to have a statistically significant effect on both thermodynamic and kinetic aspects of their interaction. The Matlab source code used for analysis (bootstrap-based analysis of smFRET data, BOBA FRET), as well as a graphical user interface, is available via http://www.aci.uzh.ch/rna/.</p>
+</div>
+<h3 id="applications">Applications</h3>
+<p>F. D. Steffen, M. Khier, D. Kowerko, R. A. Cunha, R. Börner, R. K. O. Sigel, <em>Nat. Commun.</em> (2020) <a href="https://doi.org/10.1038/s41467-019-13683-4"><img alt="" src="https://img.shields.io/badge/DOI-10.1038/s41467--019--13683--4-blue.svg?&amp;style=flat-square" /></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Metal ions and sugar puckering balance single-molecule kinetic heterogeneity in RNA and DNA tertiary contacts</p>
+<p><figure markdown>
+    <img alt="" src="../../images/graphical_abstracts/Steffen_NatCommun_2020.jpg" width="450" />
+</figure>
+The fidelity of group II intron self-splicing and retrohoming relies on long-range tertiary interactions between the intron and its flanking exons. By single-molecule FRET, we explore the binding kinetics of the most important, structurally conserved contact, the exon and intron binding site 1 (EBS1/IBS1). A comparison of RNA-RNA and RNA-DNA hybrid contacts identifies transient metal ion binding as a major source of kinetic heterogeneity which typically appears in the form of degenerate FRET states. Molecular dynamics simulations suggest a structural link between heterogeneity and the sugar conformation at the exon-intron binding interface. While Mg2+ ions lock the exon in place and give rise to long dwell times in the exon bound FRET state, sugar puckering alleviates this structural rigidity and likely promotes exon release. The interplay of sugar puckering and metal ion coordination may be an important mechanism to balance binding affinities of RNA and DNA interactions in general.</p>
+</div>
+<hr />
+<p>B. P. Paudel, E. Fiorini, R. Börner, R. K. O. Sigel, D. Rueda <em>PNAS</em> (2018) <a href="https://doi.org/10.1073/pnas.1806685115"><img alt="" src="https://img.shields.io/badge/DOI-10.1073/pnas.1806685115-blue.svg?&amp;style=flat-square" /></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Optimal molecular crowding accelerates group II intron folding and maximizes catalysis</p>
+<p><figure markdown>
+    <img alt="" src="../../images/graphical_abstracts/Paudel_PNAS_2018.png" width="450" />
+</figure>
+Unlike in vivo conditions, group II intron ribozymes are known to require high magnesium(II) concentrations ([Mg2+]) and high temperatures (42 °C) for folding and catalysis in vitro. A possible explanation for this difference is the highly crowded cellular environment, which can be mimicked in vitro by macromolecular crowding agents. Here, we combined bulk activity assays and single-molecule Förster Resonance Energy Transfer (smFRET) to study the influence of polyethylene glycol (PEG) on catalysis and folding of the ribozyme. Our activity studies reveal that PEG reduces the [Mg2+] required, and we found an {\textquotedbl}optimum{\textquotedbl} [PEG] that yields maximum activity. smFRET experiments show that the most compact state population, the putative active state, increases with increasing [PEG]. Dynamic transitions between folded states also increase. Therefore, this study shows that optimal molecular crowding concentrations help the ribozyme not only to reach the native fold but also to increase its in vitro activity to approach that in physiological conditions.</p>
+</div>
+<hr />
+<p>R. Börner, D. Kowerko, H. Guiset Miserachs, M. F. Schaffer, R. K. O. Sigel, <em>Coord Chem Rev.</em> (2016) <a href="https://doi.org/10.1016/j.ccr.2016.06.002"><img alt="" src="https://img.shields.io/badge/DOI-10.1016/j.ccr.2016.06.002-blue.svg?&amp;style=flat-square" /></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Metal ion induced heterogeneity in RNA folding studied by smFRET</p>
+<p>More than two decades of investigating nucleic acids and ribonucleic acids (RNA) using single molecule Förster resonance energy transfer (smFRET) have passed. It turned out that sample heterogeneity in structure and function of RNA molecules as well as folding intermediates, kinetic subpopulations, and interconversion rates of conformational states of RNA biomolecules, all of which are usually hidden in ensemble type experiments, are often observed characteristics. Besides proteins, metal ions play a crucial role in RNA folding and dynamics, as well as RNA/RNA or RNA/DNA interactions. RNA molecules form discrete conformational intermediates before reaching the native three-dimensional fold, whereby metal ions guide the folding pathway by changing the energetic barriers between local and global minima in the energy landscape. Here we review recent advances in the characterization of the role of metal ions in folding and function of nucleic acid structures by means of smFRET. Subsequently, the workflow of smFRET data analysis is described and exemplified by the metal ion-depending folding and dynamics of the group IIB intron from Saccharomyces cerevisiae and RNA–RNA binding kinetics of this ribozyme's 5'-splice site formation.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
