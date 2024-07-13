@@ -1,7 +1,7 @@
 # Publications
 
 ## FRETraj
-F. D. Steffen, R.A. Cunha, R. K. O. Sigel, R. Börner, *Nucleic Acids Research* (2024) [![](https://img.shields.io/badge/DOI-10.1093//nar/gkae496-blue.svg?&style=flat-square)](https://doi.org/10.1093/nar/gkae496)
+F. D. Steffen, R.A. Cunha, R. K. O. Sigel, R. Börner, *Nucleic Acids Research* (2024) [![](https://img.shields.io/badge/DOI-10.1093/nar/gkae496-blue.svg?&style=flat-square)](https://doi.org/10.1093/nar/gkae496)
 !!! abstract "FRET-guided modeling of nucleic acids"
     <figure markdown>
         ![](../images/graphical_abstracts/Steffen_NAR_2024.jpg){width=450}
